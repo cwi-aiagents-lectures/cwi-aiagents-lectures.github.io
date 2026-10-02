@@ -109,6 +109,10 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { color: var(--ink-2); text-decoration: none; font-size: .93rem; padding: 6px 10px; border-radius: 8px; }
 .nav a:hover, .nav a[aria-current] { background: var(--bg-alt); color: var(--ink); }
+.nav a.nav-cta { margin-left: 6px; background: var(--highlight); color: #fff; font-weight: 600; }
+.nav a.nav-cta:hover { background: var(--highlight); color: #fff; filter: brightness(1.1); }
+:root[data-theme="dark"] .nav a.nav-cta { color: var(--accent-ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .nav a.nav-cta { color: var(--accent-ink); } }
 .theme-toggle {
   display: inline-grid; place-items: center; width: 36px; height: 36px; margin-left: 4px;
   border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink-2); cursor: pointer;
@@ -264,7 +268,7 @@ a.person:hover strong { color: var(--highlight); }
 }
 @media (max-width: 700px) {
   .container { padding: 0 16px; }
-  .nav a:not([href*="resources"]) { display: none; }
+  .nav a:not(.nav-cta) { display: none; }
   .brand-text { font-size: .9rem; }
   .cwi-logo img { height: 24px; }
   .brand-group { gap: 10px; }

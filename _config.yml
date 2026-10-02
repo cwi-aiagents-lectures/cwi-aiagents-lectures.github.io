@@ -15,6 +15,8 @@ course:
   day: Tuesdays
   time: "10:30–12:30"
   term: November 2026 – January 2027
+  # /register redirects here
+  register_url: https://forms.gle/49N686jox5VQjL2L9
   # photo: optional path such as /assets/img/people/ertan.jpg (initials are shown otherwise)
   instructors:
     - name: M. Bilgehan Ertan
