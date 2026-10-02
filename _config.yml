@@ -20,11 +20,11 @@ course:
     - name: M. Bilgehan Ertan
       title: PhD Student, AI Safety & Privacy
       profile: https://bilgehanertan.github.io
-      photo:
-    - name: Marten van Dijk
+      photo: /assets/img/people/ertan.jpg
+    - name: Prof. Marten van Dijk
       title: Group Leader
       profile: https://www.cwi.nl/en/people/marten-van-dijk/
-      photo:
+      photo: /assets/img/people/van-dijk.jpg
 
 collections:
   lectures:
