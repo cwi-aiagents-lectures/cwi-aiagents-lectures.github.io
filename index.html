@@ -134,9 +134,17 @@ layout: default
     <div>
       <ul class="people">
         {% for p in site.course.instructors %}
-        <li>
+        <li class="person">
+          {% if p.photo %}
+          <img class="avatar" src="{{ p.photo | relative_url }}" alt="{{ p.name }}" width="96" height="96">
+          {% else %}
           <span class="avatar" aria-hidden="true">{{ p.name | split: " " | last | slice: 0 }}</span>
-          <span><strong>{{ p.name }}</strong><br><span class="muted">{{ site.course.group }}, {{ site.course.institute }}</span></span>
+          {% endif %}
+          <span>
+            <strong>{% if p.profile %}<a href="{{ p.profile }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</strong><br>
+            <span class="person-title">{{ p.title }}</span><br>
+            <span class="muted">{{ site.course.group }}, {{ site.course.institute }}</span>
+          </span>
         </li>
         {% endfor %}
       </ul>

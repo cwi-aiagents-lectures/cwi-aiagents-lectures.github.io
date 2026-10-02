@@ -1,9 +1,14 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}">
-      <span class="brand-mark" aria-hidden="true">&gt;_</span>
-      <span class="brand-text">{{ site.title }}</span>
-    </a>
+    <div class="brand-group">
+      <a class="cwi-logo" href="https://www.cwi.nl/en/" title="{{ site.course.institute }}">
+        {% include cwi-logo.html %}
+      </a>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-text">{{ site.title }}</span>
+      </a>
+    </div>
     <nav class="nav" aria-label="Main">
       <a href="{{ '/#overview' | relative_url }}">Overview</a>
       <a href="{{ '/#schedule' | relative_url }}">Schedule</a>

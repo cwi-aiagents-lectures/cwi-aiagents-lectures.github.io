@@ -1,9 +1,14 @@
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
+    <div class="footer-brand">
+      <a class="cwi-logo cwi-logo-lg" href="https://www.cwi.nl/en/" title="{{ site.course.institute }}">
+        {% include cwi-logo.html %}
+      </a>
+      <div>
       <strong>{{ site.title }}</strong><br>
       {{ site.course.institute }} · {{ site.course.group }}<br>
       {{ site.course.term }}
+      </div>
     </div>
     <div class="footer-links">
       <a href="{{ '/calendar.ics' | relative_url }}">Add all sessions to your calendar (.ics)</a>

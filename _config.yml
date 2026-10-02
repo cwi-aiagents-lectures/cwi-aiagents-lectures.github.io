@@ -15,9 +15,16 @@ course:
   day: Tuesdays
   time: "10:30–12:30"
   term: November 2026 – January 2027
+  # photo: optional path such as /assets/img/people/ertan.jpg (initials are shown otherwise)
   instructors:
     - name: M. Bilgehan Ertan
+      title: PhD Student, AI Safety & Privacy
+      profile: https://www.cwi.nl/en/people/bilgehan-ertan/
+      photo:
     - name: Marten van Dijk
+      title: Group Leader
+      profile: https://www.cwi.nl/en/people/marten-van-dijk/
+      photo:
 
 collections:
   lectures:
