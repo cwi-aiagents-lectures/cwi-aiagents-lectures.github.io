@@ -54,10 +54,11 @@ layout: default
 
     <ol class="timeline">
       {% for l in lectures %}
-      <li class="session" data-session-date="{{ l.date | date: '%Y-%m-%d' }}">
+      <li class="session" data-session-date="{{ l.date | date: '%Y-%m-%d' }}" data-session-time="{{ site.course.time }}" data-session-room="{{ l.room }}">
         <div class="session-date">
           <span class="day">{{ l.date | date: "%-d" }}</span>
           <span class="month">{{ l.date | date: "%b %Y" }}</span>
+          <span class="time">{{ site.course.time }}</span>
           <span class="room">Room {{ l.room }}</span>
         </div>
         <a class="session-card" href="{{ l.url | relative_url }}">

@@ -183,7 +183,8 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .session-date { text-align: right; padding-top: 12px; }
 .session-date .day { display: block; font: 600 2.2rem/1 var(--serif); }
 .session-date .month { display: block; color: var(--ink-2); font-size: .9rem; }
-.session-date .room { display: block; margin-top: 6px; font: .75rem var(--mono); color: var(--muted); }
+.session-date .time { display: block; margin-top: 4px; font-weight: 600; font-size: .85rem; }
+.session-date .room { display: block; margin-top: 2px; font: .75rem var(--mono); color: var(--muted); }
 .session-card {
   display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 22px 24px; text-decoration: none; color: inherit; box-shadow: var(--shadow);
@@ -272,7 +273,8 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   .session::before { left: 1px; top: 6px; }
   .session-date { text-align: left; padding-top: 0; display: flex; align-items: baseline; gap: 8px; }
   .session-date .day { font-size: 1.4rem; display: inline; }
-  .session-date .month, .session-date .room { display: inline; margin: 0; }
+  .session-date { flex-wrap: wrap; }
+  .session-date .month, .session-date .time, .session-date .room { display: inline; margin: 0; }
   .pager { grid-template-columns: 1fr; }
   .pager-link.next { grid-column: 1; }
   .footer-links { text-align: left; }
