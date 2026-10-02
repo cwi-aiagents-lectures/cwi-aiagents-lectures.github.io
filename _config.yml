@@ -1,0 +1,55 @@
+title: AI Agents in Practice
+tagline: A practical introduction to modern AI agents
+description: >-
+  A five-session course at CWI Amsterdam on using LLM-based AI agents well in
+  research, programming, and everyday technical work.
+url: "https://cwi-aiagents-lectures.github.io"
+baseurl: ""
+
+# Sessions are dated in the future; publish them anyway.
+future: true
+
+course:
+  institute: CWI Amsterdam
+  group: Computer Security (CSY)
+  day: Tuesdays
+  time: "10:30–12:30"
+  term: November 2026 – January 2027
+  instructors:
+    - name: M. Bilgehan Ertan
+    - name: Marten van Dijk
+
+collections:
+  lectures:
+    output: true
+    permalink: /lectures/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - CWI_AI_Agents_Lecture.pdf

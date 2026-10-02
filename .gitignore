@@ -1,0 +1,17 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+.bundle/
+vendor/
+
+# Source documents are not published from this repo
+/*.pdf
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

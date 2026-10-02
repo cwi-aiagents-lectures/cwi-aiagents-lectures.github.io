@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /calendar.ics
+# Times are UTC and assume CET (UTC+1), which holds for Nov–Jan.
+---
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//{{ site.title }}//Course Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:{{ site.title }}
+X-WR-TIMEZONE:Europe/Amsterdam
+{% assign lectures = site.lectures | sort: "number" %}{% for l in lectures %}{% assign d = l.date | date: "%Y%m%d" %}BEGIN:VEVENT
+UID:aiagents-session-{{ l.number }}@{{ site.url | remove: "https://" }}
+DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
+DTSTART:{{ d }}T093000Z
+DTEND:{{ d }}T113000Z
+SUMMARY:{{ site.title }} – Session {{ l.number }}: {{ l.title | replace: ",", "\," }}
+LOCATION:CWI Amsterdam\, Room {{ l.room }}
+URL:{{ l.url | absolute_url }}
+DESCRIPTION:{{ l.description | strip_newlines | replace: ",", "\," | replace: ";", "\;" }}
+END:VEVENT
+{% endfor %}END:VCALENDAR

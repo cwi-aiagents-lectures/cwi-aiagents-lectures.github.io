@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% assign lectures = site.lectures | sort: "number" %}
+{% assign idx = page.number | minus: 1 %}
+<article class="lecture" data-session-date="{{ page.date | date: '%Y-%m-%d' }}">
+  <header class="lecture-hero">
+    <div class="container narrow">
+      <a class="back" href="{{ '/#schedule' | relative_url }}">&larr; All sessions</a>
+      <p class="eyebrow">Session {{ page.number }} of {{ lectures.size }}{% if page.track %} · {{ page.track }}{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+      <dl class="meta-row">
+        <div><dt>Date</dt><dd>{{ page.date | date: "%A %-d %B %Y" }}</dd></div>
+        <div><dt>Time</dt><dd>{{ site.course.time }}</dd></div>
+        <div><dt>Room</dt><dd>{{ page.room }}</dd></div>
+        <div><dt>Hands-on</dt><dd>~30 min</dd></div>
+      </dl>
+      <span class="status-pill" data-status hidden></span>
+    </div>
+  </header>
+
+  <div class="container narrow lecture-body">
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <section class="materials" aria-labelledby="materials-h">
+      <h2 id="materials-h">Materials</h2>
+      {% if page.materials and page.materials.size > 0 %}
+        <ul class="materials-list">
+          {% for m in page.materials %}
+          <li><a href="{{ m.url | relative_url }}">{{ m.title }}</a>{% if m.note %} <span class="muted">— {{ m.note }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">Slides, examples, and links will be posted here after the session.</p>
+      {% endif %}
+    </section>
+
+    <nav class="pager" aria-label="Sessions">
+      {% if idx > 0 %}
+        {% assign pidx = idx | minus: 1 %}
+        {% assign prev = lectures[pidx] %}
+        <a class="pager-link prev" href="{{ prev.url | relative_url }}"><span>&larr; Session {{ prev.number }}</span>{{ prev.title }}</a>
+      {% else %}<span></span>{% endif %}
+      {% assign nidx = idx | plus: 1 %}
+      {% if nidx < lectures.size %}
+        {% assign next = lectures[nidx] %}
+        <a class="pager-link next" href="{{ next.url | relative_url }}"><span>Session {{ next.number }} &rarr;</span>{{ next.title }}</a>
+      {% endif %}
+    </nav>
+  </div>
+</article>

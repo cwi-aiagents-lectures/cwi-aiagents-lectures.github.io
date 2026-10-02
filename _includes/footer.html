@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>{{ site.title }}</strong><br>
+      {{ site.course.institute }} · {{ site.course.group }}<br>
+      {{ site.course.term }}
+    </div>
+    <div class="footer-links">
+      <a href="{{ '/calendar.ics' | relative_url }}">Add all sessions to your calendar (.ics)</a>
+      <a href="{{ '/resources/' | relative_url }}">Resources</a>
+    </div>
+  </div>
+</footer>
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

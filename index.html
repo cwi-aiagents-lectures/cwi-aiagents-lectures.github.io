@@ -1,0 +1,146 @@
+---
+layout: default
+---
+{% assign lectures = site.lectures | sort: "number" %}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">{{ site.course.institute }} · {{ site.course.term }}</p>
+    <h1>AI Agents <em>in Practice</em></h1>
+    <p class="lead">A five-session course for researchers and students who want to use modern AI agents well in their own work, from programming and data analysis to literature review and scientific writing.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#schedule">See the schedule</a>
+      <a class="btn btn-ghost" href="{{ '/calendar.ics' | relative_url }}">Add to calendar</a>
+    </div>
+    <dl class="hero-facts">
+      <div><dt>When</dt><dd>{{ site.course.day }}, {{ site.course.time }}</dd></div>
+      <div><dt>Sessions</dt><dd>{{ lectures.size }} × 2 hours</dd></div>
+      <div><dt>Hands-on</dt><dd>~30 min every session</dd></div>
+      <div><dt>Prerequisites</dt><dd>No ML background needed</dd></div>
+    </dl>
+    <p class="next-up" data-next-up hidden></p>
+  </div>
+  <div class="hero-terminal" aria-hidden="true">
+    <div class="term-bar"><span></span><span></span><span></span></div>
+<pre><span class="t-prompt">&gt;</span> find recent papers on agent evaluation and
+  summarise how each one measures success
+
+<span class="t-dim">● Searching the literature…</span>
+<span class="t-dim">● Reading 12 papers…</span>
+<span class="t-dim">● Writing comparison.md</span>
+
+<span class="t-ok">✓</span> Done. 3 claims need checking by you.<span class="t-cursor">▍</span></pre>
+  </div>
+</section>
+
+<section id="overview" class="section">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Overview</p>
+      <h2>Using agents is a skill</h2>
+    </div>
+    <div class="prose">
+      <p>AI agents now do much more than answer questions in a chat window. They plan multi-step tasks, call tools, write and run code, search and read the literature, and work inside real software environments. Getting good results from them depends on how you frame a task, what context you provide, how you steer a longer workflow, and how carefully you check what comes back.</p>
+      <p>The first three sessions are practical: how agents work, how to give them tasks they can complete reliably, how to spot common failure modes and verify outputs, and how to build agents into everyday research and technical work. We also look at how academic work is changing, with an emphasis on <strong>using agents as research tools while keeping human verification and responsibility for the final work</strong>.</p>
+      <p>The fourth session goes behind the interface: how LLMs and agents are trained, and where AI safety questions arise. The course ends in January with a session built around what participants built, what worked, and what failed.</p>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Schedule</p>
+    <h2>Five sessions, November to January</h2>
+    <p class="section-lead">All sessions run {{ site.course.time }} at CWI. Each combines concepts, worked examples, and about 30 minutes of hands-on work or discussion.</p>
+
+    <ol class="timeline">
+      {% for l in lectures %}
+      <li class="session" data-session-date="{{ l.date | date: '%Y-%m-%d' }}">
+        <div class="session-date">
+          <span class="day">{{ l.date | date: "%-d" }}</span>
+          <span class="month">{{ l.date | date: "%b %Y" }}</span>
+          <span class="room">Room {{ l.room }}</span>
+        </div>
+        <a class="session-card" href="{{ l.url | relative_url }}">
+          <div class="session-head">
+            <span class="session-num">Session {{ l.number }}</span>
+            <span class="tag tag-{{ l.track | downcase }}">{{ l.track }}</span>
+            <span class="status-pill" data-status hidden></span>
+          </div>
+          <h3>{{ l.title }}</h3>
+          <p>{{ l.description }}</p>
+          <ul class="chips">
+            {% for t in l.topics %}<li>{{ t }}</li>{% endfor %}
+          </ul>
+          <p class="session-hands"><strong>Hands-on:</strong> {{ l.interactive }}</p>
+          <span class="session-more">Session details &rarr;</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="fine">Schedule and rooms are tentative and may change. Check this page before each session.</p>
+  </div>
+</section>
+
+<section id="goals" class="section">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Learning goals</p>
+      <h2>By the end of the course you should be able to…</h2>
+    </div>
+    <ol class="goals">
+      <li>Explain what modern LLM-based AI agents are and how they differ from chat-based use of LLMs.</li>
+      <li>Use agents effectively for multi-step, tool-assisted tasks.</li>
+      <li>Structure tasks, instructions, context, and workflows so that agents work more reliably.</li>
+      <li>Recognise common limitations and failure modes, and verify agent outputs appropriately.</li>
+      <li>Integrate agents into your own research, programming, or knowledge-work workflows.</li>
+      <li>Use agents for literature exploration, research organisation, and scientific writing while keeping appropriate human verification.</li>
+      <li>Understand, at a high level, how LLMs and agents are trained and post-trained.</li>
+      <li>Find entry points and resources for further study or research in LLMs, agents, and AI safety.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="practical" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Practical info</p>
+    <h2>Before you come</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Who it is for</h3>
+        <p>Researchers and students at CWI who want to use agents in their own work. No machine learning or LLM research background is needed for the first three sessions. Basic familiarity with AI assistants helps but is not required.</p>
+      </div>
+      <div class="card">
+        <h3>What you need</h3>
+        <p>A laptop and your own subscription to an AI assistant with agent capabilities, such as <strong>Claude Code</strong>, <strong>ChatGPT Codex</strong>, or <strong>Gemini</strong>. Free versions are often too limited for the longer exercises.</p>
+      </div>
+      <div class="card">
+        <h3>Format</h3>
+        <p>Five two-hour sessions. Each mixes conceptual material, practical examples, and about 30 minutes of exercises, demonstrations, or discussion. You are encouraged to experiment with agents between sessions.</p>
+      </div>
+      <div class="card">
+        <h3>The technical session</h3>
+        <p>The 15 December session covers more technical material but stays accessible without an ML background. Its aim is a conceptual foundation and a roadmap for further study.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instructors" class="section">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Instructors</p>
+      <h2>Who is teaching</h2>
+    </div>
+    <div>
+      <ul class="people">
+        {% for p in site.course.instructors %}
+        <li>
+          <span class="avatar" aria-hidden="true">{{ p.name | split: " " | last | slice: 0 }}</span>
+          <span><strong>{{ p.name }}</strong><br><span class="muted">{{ site.course.group }}, {{ site.course.institute }}</span></span>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="muted">Many of the examples in the course come from workflows we use in our own research.</p>
+    </div>
+  </div>
+</section>
