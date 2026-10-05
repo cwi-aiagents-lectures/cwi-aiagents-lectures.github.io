@@ -107,7 +107,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .brand-divider { width: 1px; height: 26px; background: var(--line); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 600; white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: 4px; }
-.nav a { color: var(--ink-2); text-decoration: none; font-size: .93rem; padding: 6px 10px; border-radius: 8px; }
+.nav a { white-space: nowrap; color: var(--ink-2); text-decoration: none; font-size: .93rem; padding: 6px 10px; border-radius: 8px; }
 .nav a:hover, .nav a[aria-current] { background: var(--bg-alt); color: var(--ink); }
 .nav a.nav-cta { margin-left: 6px; background: var(--highlight); color: #fff; font-weight: 600; }
 .nav a.nav-cta:hover { background: var(--highlight); color: #fff; filter: brightness(1.1); }
@@ -261,6 +261,9 @@ a.person:hover strong { color: var(--highlight); }
 .footer-links { display: flex; flex-direction: column; gap: 6px; text-align: right; }
 
 /* Responsive */
+@media (max-width: 1000px) {
+  .nav a:not(.nav-cta) { display: none; }
+}
 @media (max-width: 860px) {
   .two-col { grid-template-columns: 1fr; gap: 16px; }
   .cards, .people { grid-template-columns: 1fr; }
@@ -268,7 +271,6 @@ a.person:hover strong { color: var(--highlight); }
 }
 @media (max-width: 700px) {
   .container { padding: 0 16px; }
-  .nav a:not(.nav-cta) { display: none; }
   .brand-text { font-size: .9rem; }
   .cwi-logo img { height: 24px; }
   .brand-group { gap: 10px; }
