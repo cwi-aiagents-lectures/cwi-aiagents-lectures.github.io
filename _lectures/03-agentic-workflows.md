@@ -97,8 +97,7 @@ After this session you can:
 
 ## Interactive component
 
-A larger hands-on workflow. Choose one track. The exercise materials are
-shared before the session.
+A larger hands-on workflow. Choose one track.
 
 - **Research track.** Write a mini literature review on a given narrow topic
   and build a comparison table. Verify every citation: does it exist, and does

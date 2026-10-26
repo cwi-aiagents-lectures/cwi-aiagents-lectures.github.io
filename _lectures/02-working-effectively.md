@@ -87,8 +87,7 @@ After this session you can:
 
 ## Interactive component
 
-About 30 minutes of hands-on work. The exercise materials are shared before
-the session.
+About 30 minutes of hands-on work.
 
 1. **Same task, two prompts.** Run a vague and a well-specified version of the
    same data-cleaning task. Compare the results and the number of turns.

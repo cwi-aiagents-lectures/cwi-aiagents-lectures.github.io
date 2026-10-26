@@ -89,7 +89,7 @@ After this session you can:
 ## Interactive component
 
 About 30 minutes of guided exercises with checkpoints, so you can catch up if
-you fall behind. The exercise materials are shared before the session.
+you fall behind.
 
 1. **Orientation.** Ask the agent to explain a small unfamiliar project with
    code, data, and a paper. Watch which tools it calls.
