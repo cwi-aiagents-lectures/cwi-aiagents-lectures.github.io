@@ -23,6 +23,10 @@ layout: default
   <div class="container narrow lecture-body">
     <div class="prose">
       {{ content }}
+      {% if page.readings %}
+      <h2 id="readings">Readings</h2>
+      {% include reading-list.html readings=page.readings %}
+      {% endif %}
     </div>
 
     <section class="materials" aria-labelledby="materials-h">

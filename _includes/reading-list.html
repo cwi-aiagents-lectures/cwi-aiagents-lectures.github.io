@@ -1,0 +1,6 @@
+{% assign groups = "core,optional" | split: "," %}{% for g in groups %}{% assign items = include.readings[g] %}{% if items and items.size > 0 %}
+<p><strong>{{ g | capitalize }}</strong></p>
+<ul>
+{% for r in items %}<li>{% if r.authors %}{{ r.authors }}, {% endif %}<a href="{{ r.url }}"><em>{{ r.title }}</em></a>{% if r.year %} ({{ r.year }}){% endif %}.{% if r.note %} {{ r.note }}{% endif %}</li>
+{% endfor %}</ul>
+{% endif %}{% endfor %}

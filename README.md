@@ -26,7 +26,7 @@ Then open <http://localhost:4000>.
 | Course-wide info (title, time, instructors) | `_config.yml` → `course:` |
 | Homepage sections | `index.html` |
 | One page per session | `_lectures/0N-*.md` |
-| Further reading | `resources.md` |
+| Further reading | `readings:` in each session file (shown on the session page and on `resources.md`) |
 
 Each session file has front matter for its date, room, summary, topic chips
 and hands-on description. To publish slides after a session, add them under
@@ -40,6 +40,18 @@ materials:
 
 Only PDFs in the repo root are git-ignored (that is where the course
 description source lives); PDFs under `assets/` are published normally.
+
+Readings live in each session's `readings:`, split into `core` and `optional`.
+`authors`, `year`, and `note` are optional:
+
+```yaml
+readings:
+  core:
+    - authors: Yao et al.
+      title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+      url: https://arxiv.org/abs/2210.03629
+      year: 2022
+```
 
 The calendar feed at `/calendar.ics` is generated from the session files.
 
