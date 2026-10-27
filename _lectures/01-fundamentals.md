@@ -10,6 +10,7 @@ description: >-
   an agent system, and the mental models that predict how agents behave.
 topics:
   - From chat to agents
+  - What you can use it for
   - The agent loop
   - Model and harness
   - Mental models
@@ -31,7 +32,7 @@ readings:
       year: 2023
     - title: mini-swe-agent
       url: https://github.com/SWE-agent/mini-swe-agent
-      note: A complete agent in about 100 lines of Python.
+      note: A complete agent in about 100 lines of Python, walked through in the slides' appendix.
     - authors: Kwa et al. (METR)
       title: Measuring AI Ability to Complete Long Software Tasks
       url: https://arxiv.org/abs/2503.14499
@@ -65,13 +66,18 @@ After this session you can:
 
 ## What we will cover
 
-- **What agents do today, and what goes wrong.** A short sorting exercise:
-  which research tasks would you let an agent do on its own, which only after
-  asking you, and which never?
+- **What can I use it for?** A short gallery of everyday uses, led by writing
+  and research: working on a LaTeX paper, checking references, reading and
+  comparing papers, critiquing your own draft, proposal text, slides and
+  exercises, data and figures, and unfamiliar code. For each, what the agent
+  does and what *you* still check.
+- **What goes wrong.** A short sorting exercise: which research tasks would you
+  let an agent do on its own, which only after asking you, and which never?
 - **From LLM to agent.** Next-token prediction, chat as a function of the
   transcript, reasoning, tool definitions, and tool calls. The harness runs the
-  tools and feeds the results back, and that loop is the agent. We read a
-  complete agent of about 100 lines and an annotated real transcript.
+  tools and feeds the results back, and that loop is the agent. We read an
+  annotated real transcript. A complete agent of about 100 lines is in the
+  slides' appendix and the optional readings.
 - **The moving parts.** Environment, observations, actions, and feedback.
   Model versus harness: the same model in a different harness behaves
   differently. A map of agent capabilities, and the two ways to change an

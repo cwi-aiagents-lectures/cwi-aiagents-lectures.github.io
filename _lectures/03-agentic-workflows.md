@@ -14,7 +14,7 @@ topics:
   - Verification
   - Research workflows
   - Academic integrity
-interactive: A larger workflow on a research track or a technical track, with every result verified.
+interactive: A larger workflow on a research, technical or writing track, with every result verified.
 readings:
   core:
     - authors: Liu et al.
@@ -105,3 +105,6 @@ A larger hands-on workflow. Choose one track.
 - **Technical track.** Start from a messy analysis script and dataset. Add
   checks and tests, refactor, and reproduce a figure. A separate verifier
   session reviews the diff.
+- **Writing track.** Start from a section of a LaTeX paper. Revise it with the
+  agent under explicit constraints, then verify every citation and every
+  changed claim. Finish with a short disclosure note on how the agent was used.
