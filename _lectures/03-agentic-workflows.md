@@ -92,8 +92,8 @@ After this session you can:
   a new area, organising and comparing papers, checking claims and references,
   and support for writing. Integrity: disclosure, authorship, venue and funder
   policies, and peer-review confidentiality.
-- **Agents in technical work.** Coding, debugging, data analysis, job scripts
-  for compute clusters, and automating pipelines.
+- **Agents in technical work.** Coding, debugging, data analysis, and
+  automating pipelines.
 
 ## Interactive component
 
