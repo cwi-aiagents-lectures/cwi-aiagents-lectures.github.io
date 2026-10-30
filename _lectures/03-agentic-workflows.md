@@ -62,11 +62,11 @@ independently and effectively.
 
 After this session you can:
 
-- decompose a larger task and decide which parts to delegate and which to keep;
-- choose between a single agent, subagents, and parallel sessions;
+- decompose a larger task and decide which parts to delegate and which to keep.
+- choose between a single agent, subagents, and parallel sessions.
 - keep long work coherent with a context budget, compaction, progress files,
-  and handoffs;
-- recognise common failure modes and apply verification strategies;
+  and handoffs.
+- recognise common failure modes and apply verification strategies.
 - use agents in literature work and writing while meeting integrity
   requirements.
 

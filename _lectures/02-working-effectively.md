@@ -54,12 +54,12 @@ it up, steering it, and keeping it safe.
 After this session you can:
 
 - write a task specification with context, constraints, and a definition of
-  done;
+  done.
 - set up persistent project context in an instruction file and choose what
-  goes in it;
-- extend an agent with tools (MCP servers, skills) when that is worth it;
+  goes in it.
+- extend an agent with tools (MCP servers, skills) when that is worth it.
 - steer, interrupt, and recover a session, and recognise when it is going off
-  track;
+  track.
 - configure permissions sensibly and explain what data leaves your machine.
 
 ## What we will cover

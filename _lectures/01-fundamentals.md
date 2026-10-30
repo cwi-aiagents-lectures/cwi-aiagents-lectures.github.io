@@ -56,11 +56,11 @@ correct mental model and with a first task of your own to try at home.
 
 After this session you can:
 
-- explain the difference between chat use of an LLM and an agent;
+- explain the difference between chat use of an LLM and an agent.
 - describe the agent loop: the model asks for a tool call, the harness runs
-  it, and the result goes back to the model;
+  it, and the result goes back to the model.
 - name the parts of an agent system: model, harness, tools, environment, and
-  user;
+  user.
 - predict common behaviours from the context window: what the agent can see,
   what it forgets, and why it is inconsistent.
 
@@ -108,7 +108,7 @@ About 30 minutes.
 2. **Live demo.** We take a paper, ask the agent to prove, disprove, or do
    something new with it, then ask it to make slides that explain what it did.
    We check those slides together: they are evidence to verify, not proof. You
-   can follow along with the same prompt; your output will differ from ours.
+   can follow along with the same prompt. Your output will differ from ours.
 3. **Your take-home task.** Choose one: ask the question you have always wanted
    answered, or work through a paper you did not understand. Other options
    include a project web page, a mathematical analysis with a proof, a

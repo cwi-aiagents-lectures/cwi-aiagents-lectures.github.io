@@ -7,7 +7,7 @@ room: L017
 track: Technical
 description: >-
   Pre-training, supervised fine-tuning, preference learning, and reinforcement
-  learning; how agentic models are trained; and the main safety and security
+  learning, how agentic models are trained, and the main safety and security
   problems for agents.
 topics:
   - Pre-training
@@ -86,11 +86,11 @@ anyone considering research or more technical work with LLMs and agents.
 After this session you can:
 
 - describe pre-training, supervised fine-tuning (SFT), preference learning, and
-  reinforcement learning with verifiable rewards;
-- explain how agentic models are trained in environments with rewards;
+  reinforcement learning with verifiable rewards.
+- explain how agentic models are trained in environments with rewards.
 - explain observed behaviours, such as hallucination, sycophancy, edited
-  tests, and uneven strengths across tasks, in terms of training;
-- name the main safety and security problem areas for agents;
+  tests, and uneven strengths across tasks, in terms of training.
+- name the main safety and security problem areas for agents.
 - find entry points for further study.
 
 ## What we will cover
