@@ -14,7 +14,7 @@ topics:
   - The agent loop
   - Model and harness
   - Mental models
-interactive: Guided, checkpointed first tasks with your own agent.
+interactive: A live demo from a paper to slides you can check, and a take-home task of your own.
 readings:
   core:
     - authors: Anthropic
@@ -50,7 +50,7 @@ AI agents now do much more than answer questions in a chat window. They plan
 multi-step tasks, call tools, write and run code, search the literature, and
 work inside real software environments. This first session explains what
 happens underneath when you type a request into an agent. You leave with a
-correct mental model and with your first guided tasks done.
+correct mental model and with a first task of your own to try at home.
 
 ## Learning outcomes
 
@@ -67,44 +67,54 @@ After this session you can:
 ## What we will cover
 
 - **What can I use it for?** A short gallery of everyday uses, led by writing
-  and research: working on a LaTeX paper, checking references, reading and
-  comparing papers, critiquing your own draft, proposal text, slides and
-  exercises, data and figures, and unfamiliar code. For each, what the agent
-  does and what *you* still check.
+  and research: drafting a paper, literature review, proofs and mathematics,
+  reviewing your own paper and drafting the rebuttal, proposal text, slides and
+  exercises, data and figures, and code and small tools such as a project web
+  page. For each, what the agent does and what *you* still check.
 - **What goes wrong.** A short sorting exercise: which research tasks would you
   let an agent do on its own, which only after asking you, and which never?
+  There is no oracle: with a robust way to check the result, you can let it
+  run.
 - **From LLM to agent.** Next-token prediction, chat as a function of the
-  transcript, reasoning, tool definitions, and tool calls. The harness runs the
+  transcript and the system prompt, reasoning, what a tool is, tool
+  definitions, and tool calls. The harness runs the
   tools and feeds the results back, and that loop is the agent. We read an
   annotated real transcript. A complete agent of about 100 lines is in the
   slides' appendix and the optional readings.
-- **The moving parts.** Environment, observations, actions, and feedback.
-  Model versus harness: the same model in a different harness behaves
-  differently. A map of agent capabilities, and the two ways to change an
-  agent's behaviour: training the model or engineering the harness. As users,
-  we work on the harness.
+- **The moving parts.** Environment, observations, actions, and feedback, in
+  code, papers, data and proofs. Model versus harness: the better equipped the
+  harness, the better the same model performs. A map of agent capabilities. You
+  are a harness engineer: we cannot retrain the model, but we set up the task,
+  the files, the tools and the permissions. How models are trained is the
+  topic of Session 4.
 - **Mental models.** The context window is the agent's entire world. It has no
-  memory between sessions unless something is written to a file. It sees the
-  files it has read, not your screen. Quality drops in long contexts. Agents
-  are nondeterministic, strong at some tasks and weak at similar-looking ones,
-  and can be confidently wrong or simply agree with you. Tokens cost money and
-  time.
+  memory between sessions unless something is written to a file. It sees only
+  what a tool call brought in, not your screen. Quality drops in long contexts,
+  and it can fixate on an earlier idea. Agents are nondeterministic, their
+  skills are uneven (a hard task can go well while an easy-looking one fails),
+  and they can be confidently wrong or simply agree with you. Tokens cost money
+  and time.
 - **The tool landscape.** Command-line, IDE, and cloud agents, and the
-  permission modes that control what an agent may do without asking.
+  permission modes that control what an agent may do without asking, including
+  a mode where a second model reviews each action. Before you start: how to
+  turn off training on your data.
 
 ## Interactive component
 
-About 30 minutes of guided exercises with checkpoints, so you can catch up if
-you fall behind.
+About 30 minutes.
 
-1. **Orientation.** Ask the agent to explain a small unfamiliar project with
-   code, data, and a paper. Watch which tools it calls.
-2. **See the loop.** Give it a two-step task: compute a statistic from a CSV
-   file, then plot it. Which steps came from the model, and which from tools?
-3. **Statelessness.** Start a fresh session and ask about the previous one.
-   Then add a notes file and try again.
-4. **Catch the error.** A provided analysis contains a planted bug. Does the
-   agent find it unprompted? When asked? What did *you* have to check?
+1. **Install.** We install Claude Code and the Codex CLI live.
+2. **Live demo.** We take a paper, ask the agent to prove, disprove, or do
+   something new with it, then ask it to make slides that explain what it did.
+   We check those slides together: they are evidence to verify, not proof. You
+   can follow along with the same prompt; your output will differ from ours.
+3. **Your take-home task.** Choose one: ask the question you have always wanted
+   answered, or work through a paper you did not understand. Other options
+   include a project web page, a mathematical analysis with a proof, a
+   related-work document, or a data analysis. Note what you checked. Session 2
+   starts with a few of these.
+
+Four short self-study exercises are in the appendix of the slides.
 
 We close by introducing the **agent journal**: a one-page weekly log of what
 you asked an agent to do, what happened, what you checked, and what went

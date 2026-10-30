@@ -64,6 +64,8 @@ After this session you can:
 
 ## What we will cover
 
+- **Your take-home task.** We start with what you tried after Session 1: what
+  you asked, what happened, and what you checked.
 - **Task formulation.** Vague versus specified tasks. What "done" looks like,
   constraints and non-goals, and examples. Brief the agent as you would a
   capable new colleague, let it ask you questions, and have it plan before it
