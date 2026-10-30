@@ -14,7 +14,7 @@ topics:
   - The agent loop
   - Model and harness
   - Mental models
-interactive: A live demo from a paper to slides you can check, and a take-home task of your own.
+interactive: Getting your agent installed and working, and a take-home task of your own.
 readings:
   core:
     - authors: Anthropic
@@ -104,12 +104,13 @@ After this session you can:
 
 About 30 minutes.
 
-1. **Install.** We install Claude Code and the Codex CLI live.
-2. **Live demo.** We take a paper, ask the agent to prove, disprove, or do
-   something new with it, then ask it to make slides that explain what it did.
-   We check those slides together: they are evidence to verify, not proof. You
-   can follow along with the same prompt. Your output will differ from ours.
-3. **Your take-home task.** Choose one: ask the question you have always wanted
+1. **Install and log in.** Claude Code or the Codex CLI, on macOS, Linux or
+   Windows. If yours already works, help a neighbour.
+2. **Safe start.** Choose a mode that asks before acting, and turn off training
+   on your data.
+3. **Is it working?** A version check, then one question to the agent in an
+   empty folder.
+4. **Your take-home task.** Choose one: ask the question you have always wanted
    answered, or work through a paper you did not understand. Other options
    include a project web page, a mathematical analysis with a proof, a
    related-work document, or a data analysis. Note what you checked. Session 2
