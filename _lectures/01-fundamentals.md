@@ -95,9 +95,10 @@ After this session you can:
   and they can be confidently wrong or simply agree with you. Tokens cost money
   and time.
 - **The tool landscape.** Command-line, IDE, and cloud agents, and the
-  permission modes that control what an agent may do without asking, including
-  a mode where a second model reviews each action. Before you start: how to
-  turn off training on your data.
+  permission modes that control what an agent may do without asking,
+  including a mode where permission rules and built-in approvals are checked
+  first and the remaining, riskier actions go to a second model for review.
+  Before you start: how to turn off training on your data.
 
 ## Interactive component
 
