@@ -14,7 +14,7 @@ topics:
   - The agent loop
   - Model and harness
   - Mental models
-interactive: Getting your agent installed and working, and a take-home task of your own.
+interactive: Install Claude Code, set up a first local LaTeX project, a live first prompt, and a take-home task of your own.
 readings:
   core:
     - authors: Anthropic
@@ -66,6 +66,9 @@ After this session you can:
 
 ## What we will cover
 
+- **Our privacy posture.** Two short reference slides: what we send to a
+  model provider in this course, what we assume, and your options for
+  sensitive or NDA data.
 - **What can I use it for?** A short gallery of everyday uses, led by writing
   and research: drafting a paper, literature review, proofs and mathematics,
   reviewing your own paper and drafting the rebuttal, proposal text, slides and
@@ -104,12 +107,17 @@ After this session you can:
 
 About 30 minutes.
 
-1. **Install and log in.** Claude Code or the Codex CLI, on macOS, Linux or
-   Windows. If yours already works, help a neighbour.
-2. **Safe start.** Choose a mode that asks before acting, and turn off training
-   on your data.
-3. **Is it working?** A version check, then one question to the agent in an
-   empty folder.
+We do each step live on screen, and you follow along.
+
+1. **Install and log in.** Claude Code, in a cautious mode, with training
+   turned off. The Codex CLI also works. If yours already works, help a
+   neighbour.
+2. **Your first project.** Your agent reads a short setup file from this site
+   and sets up a local LaTeX project. It checks whether LaTeX is installed,
+   asks before installing anything, compiles a first PDF and opens it.
+3. **Your first prompt.** A live demo: study a paper, propose something new,
+   and write it up with a figure. Then improve the figure. It is never
+   one-shot.
 4. **Your take-home task.** Choose one: ask the question you have always wanted
    answered, or work through a paper you did not understand. Other options
    include a project web page, a mathematical analysis with a proof, a
