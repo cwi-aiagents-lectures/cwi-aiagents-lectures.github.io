@@ -81,7 +81,9 @@ After this session you can:
 - **From LLM to agent.** Next-token prediction, chat as a function of the
   transcript and the system prompt, reasoning, what a tool is, tool
   definitions, and tool calls. The harness runs the
-  tools and feeds the results back, and that loop is the agent. We read an
+  tools and feeds the results back, and that loop is the agent. Neural plus
+  symbolic: the model proposes, and exact tools such as Python, LaTeX, tests
+  and Lean compute and check. We read an
   annotated real transcript. A complete agent of about 100 lines is in the
   slides' appendix and the optional readings.
 - **The moving parts.** Environment, observations, actions, and feedback, in
