@@ -40,7 +40,7 @@
         var time = el.getAttribute("data-session-time");
         var room = el.getAttribute("data-session-room");
         if (time) label += ", " + time;
-        if (room) label += " · Room " + room;
+        if (room) label += " · " + (/room/i.test(room) ? room : "Room " + room);
         banner.innerHTML = "Next session: <a></a> · " + label;
         var a = banner.querySelector("a");
         a.href = link.getAttribute("href");

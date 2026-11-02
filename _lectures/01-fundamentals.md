@@ -3,7 +3,7 @@ number: 1
 title: Fundamentals of AI Agents
 subtitle: What happens when you type a request into an agent, and the mental models you need to use one well.
 date: 2026-11-03 10:30:00 +0100
-room: L120
+room: Euler room
 track: Practical
 description: >-
   How an agent differs from chat use of an LLM, the agent loop, the parts of

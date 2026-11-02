@@ -16,7 +16,7 @@ DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
 DTSTART:{{ d }}T093000Z
 DTEND:{{ d }}T113000Z
 SUMMARY:{{ site.title }} – Session {{ l.number }}: {{ l.title | replace: ",", "\," }}
-LOCATION:CWI Amsterdam\, Room {{ l.room }}
+LOCATION:CWI\, Science Park 123\, Amsterdam\, {% if l.room contains "room" %}{{ l.room }}{% else %}Room {{ l.room }}{% endif %}
 URL:{{ l.url | absolute_url }}
 DESCRIPTION:{{ l.description | strip_newlines | replace: ",", "\," | replace: ";", "\;" }}
 END:VEVENT
