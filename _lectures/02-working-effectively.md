@@ -3,7 +3,7 @@ number: 2
 title: Working Effectively with AI Agents
 subtitle: How to set up and steer a single task so the agent completes it reliably and safely.
 date: 2026-11-10 10:30:00 +0100
-room: L017
+room: Euler room
 track: Practical
 description: >-
   Task formulation, project context, tools and extensions, steering a session,

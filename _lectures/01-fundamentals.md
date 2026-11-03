@@ -66,9 +66,6 @@ After this session you can:
 
 ## What we will cover
 
-- **Our privacy posture.** Two short reference slides: what we send to a
-  model provider in this course, what we assume, and your options for
-  sensitive or NDA data.
 - **What can I use it for?** A short gallery of everyday uses, led by writing
   and research: drafting a paper, literature review, proofs and mathematics,
   reviewing your own paper and drafting the rebuttal, proposal text, slides and

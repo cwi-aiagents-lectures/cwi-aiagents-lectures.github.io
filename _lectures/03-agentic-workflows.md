@@ -3,7 +3,7 @@ number: 3
 title: Building Effective Agentic Workflows
 subtitle: Larger and longer work with agents, and verifying results instead of trusting them.
 date: 2026-12-01 10:30:00 +0100
-room: L017
+room: Euler room
 track: Practical
 description: >-
   Decomposing larger tasks, keeping long work coherent, failure modes and
