@@ -41,7 +41,9 @@ readings:
       title: "Artificial Intelligence: A Modern Approach"
       url: https://aima.cs.berkeley.edu/
       note: Chapter 2, Intelligent Agents.
-materials: []
+materials:
+  - title: Slides (PDF)
+    url: /assets/slides/01-fundamentals.pdf
 ---
 
 ## Overview
