@@ -14,7 +14,7 @@ topics:
   - Tools and extensions
   - Human–agent interaction
   - Safety and confidentiality
-interactive: Same task with two prompts, writing an instruction file, and a prompt-injection sandbox.
+interactive: TBD
 readings:
   core:
     - authors: Anthropic
@@ -89,16 +89,7 @@ After this session you can:
 
 ## Interactive component
 
-About 30 minutes of hands-on work.
-
-1. **Same task, two prompts.** Run a vague and a well-specified version of the
-   same data-cleaning task. Compare the results and the number of turns.
-2. **Instruction file.** Write an `AGENTS.md`-style file for a provided
-   project: conventions, how to run the tests, what not to touch. Rerun a task
-   and compare.
-3. **Injection in a sandbox.** Ask the agent to summarise a folder that
-   contains a document with a hidden, harmless instruction. Did the agent
-   follow it? Which permission settings would have contained it?
+TBD.
 
 ## Between sessions
 
