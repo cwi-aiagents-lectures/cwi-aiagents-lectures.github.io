@@ -1,19 +1,21 @@
 ---
 number: 2
 title: Working Effectively with AI Agents
-subtitle: How to set up and steer a single task so the agent completes it reliably and safely.
+subtitle: How to set up and steer a single task so the agent completes it reliably and safely, and how to extend it with skills.
 date: 2026-11-10 10:30:00 +0100
 room: Euler room
 track: Practical
 description: >-
-  Task formulation, project context, tools and extensions, steering a session,
-  and safe use: permissions, prompt injection, and what data leaves your machine.
+  A good task description, instruction files and memory, tools, steering a
+  session, skills and skill stacks, and safe use: how a sandbox works, prompt
+  injection, and what data leaves your machine.
 topics:
-  - Task formulation
-  - Context
+  - A good task description
+  - Context and memory
   - Tools and extensions
   - Human–agent interaction
-  - Safety and confidentiality
+  - Skills and skill stacks
+  - Sandboxing and safety
 interactive: TBD
 readings:
   core:
@@ -26,15 +28,18 @@ readings:
       url: https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
       year: 2025
   optional:
+    - authors: Barry Zhang, Keith Lazuka, Mahesh Murag (Anthropic)
+      title: Equipping Agents for the Real World with Agent Skills
+      url: https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills
+      year: 2025
+    - authors: Li et al.
+      title: "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
+      url: https://arxiv.org/abs/2602.12670
+      year: 2026
     - authors: Anthropic
-      title: Best Practices for Claude Code
-      url: https://code.claude.com/docs/en/best-practices
-    - title: AGENTS.md
-      url: https://agents.md/
-      note: An open format for project instruction files.
-    - title: Model Context Protocol
-      url: https://modelcontextprotocol.io/
-      note: An open standard for connecting agents to external tools and data.
+      title: Claude Code documentation on skills and sandboxing
+      url: https://code.claude.com/docs/en/skills
+      note: The sandboxing page is at code.claude.com/docs/en/sandboxing.
     - authors: Greshake et al.
       title: "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
       url: https://arxiv.org/abs/2302.12173
@@ -53,39 +58,43 @@ it up, steering it, and keeping it safe.
 
 After this session you can:
 
-- write a task specification with context, constraints, and a definition of
-  done.
-- set up persistent project context in an instruction file and choose what
-  goes in it.
-- extend an agent with tools (MCP servers, skills) when that is worth it.
+- write a task description with context, constraints, and a definition of
+  done that can be checked.
+- set up persistent project context in an instruction file, and manage what
+  the agent remembers between sessions.
+- extend an agent with tools (MCP servers) and skills when that is worth it,
+  and judge a published skill stack before you install it.
 - steer, interrupt, and recover a session, and recognise when it is going off
   track.
-- configure permissions sensibly and explain what data leaves your machine.
+- explain how a sandbox contains an agent's actions, and what data leaves
+  your machine.
 
 ## What we will cover
 
 - **Your take-home task.** We start with what you tried after Session 1: what
   you asked, what happened, and what you checked.
-- **Task formulation.** Vague versus specified tasks. What "done" looks like,
-  constraints and non-goals, and examples. Brief the agent as you would a
-  capable new colleague, let it ask you questions, and have it plan before it
-  acts.
-- **Context.** What the agent needs versus what it can find for itself.
-  Pointing to files versus pasting them. Project instruction files such as
-  `AGENTS.md` or Claude Code's `CLAUDE.md`. Too little versus too much context,
-  and when to start a fresh session.
-- **Tools and extensions.** Built-in tools (shell, files, search, web), MCP
-  servers, and skills. When adding a tool helps and when it only adds noise.
-- **Human–agent interaction.** Steering and interrupting, planning modes,
-  checkpoints and rewinding, and git as a safety net. Signs of trouble: loops,
-  scope creep, edited tests, and apology spirals.
-- **Safety and confidentiality in practice.** Permission modes and
-  sandboxing, credentials, and prompt injection, with a harmless live demo.
-  The "lethal trifecta" of private data, untrusted content, and outside
-  communication. What leaves your machine: provider data policies, unpublished
-  results, personal data under the GDPR, and confidential peer-review
-  material. Local and open-weight options.
-- **Cost.** Subscriptions versus API use, and choosing a model.
+- **A good task description.** Vague versus specified tasks. What "done"
+  looks like, constraints and non-goals, and examples. Brief the agent as you
+  would a capable new colleague, and let it interview you before it starts.
+- **Context and memory.** What the agent needs versus what it can find for
+  itself. Pointing to the source. Project instruction files such as
+  `AGENTS.md` or Claude Code's `CLAUDE.md`, and the memory files the agent
+  keeps between sessions. Too little versus too much context, and when to
+  start a fresh session.
+- **Tools and extensions.** Built-in tools (shell, files, search, web) and MCP
+  servers. When adding a tool helps and when it only adds noise.
+- **Human–agent interaction.** Steering and interrupting, checkpoints and
+  rewinding, and git as a safety net. Signs of trouble: loops, scope creep,
+  edited tests, and apology spirals.
+- **Skills and skill stacks.** A skill is a folder with a recipe. How to make
+  your own with your agent, and what research says about which skills help.
+  Skill stacks that people share for research and development, how they are
+  built, and how to judge one before you install it.
+- **Sandboxing and safety.** How a sandbox works and how it keeps an agent's
+  actions contained, where it leaks, and stronger isolation. Prompt injection,
+  with a harmless live demo, and the "lethal trifecta" of private data,
+  untrusted content, and outside communication. What leaves your machine,
+  confidential peer-review material, personal data, local models, and cost.
 
 ## Interactive component
 
