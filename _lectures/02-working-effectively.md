@@ -105,5 +105,5 @@ TBD.
 There are three weeks until Session 3. Use an agent on two or three real tasks
 from your own research, programming, or studies, and fill in your agent
 journal for each: what you asked, what happened, what you checked, and what
-went wrong. Session 3 opens with a few of these stories, and they feed
-directly into the final session.
+went wrong. Turn one procedure you repeat into a skill. Session 3 opens with a
+few of these stories, and they feed directly into the final session.
