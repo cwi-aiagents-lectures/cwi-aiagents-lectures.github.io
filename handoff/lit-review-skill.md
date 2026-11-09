@@ -2,7 +2,7 @@
 
 You are a coding agent, for example Claude Code or Codex. A participant of the course "AI Agents in Practice" (CWI, 2026) asked you to read this file and follow it. Work through the steps below in order. Talk to the user in plain, short sentences.
 
-If you received this file through a tool that summarises web pages, for example Claude Code's WebFetch, stop and download the raw file first, then read all of it: `curl -L https://cwi-aiagents-lectures.github.io/handoff/lit-review-skill.md`. The steps below must be followed exactly, not from a summary.
+If you received this file through a tool that summarises web pages, for example Claude Code's WebFetch, stop and download the raw file first, then read all of it: `curl -L https://bilgehan.io/lit.md` (or `curl -L https://cwi-aiagents-lectures.github.io/handoff/lit-review-skill.md`). The steps below must be followed exactly, not from a summary.
 
 ## Goal
 

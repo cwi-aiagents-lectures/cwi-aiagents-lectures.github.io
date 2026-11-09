@@ -106,7 +106,9 @@ About 17 minutes. We do each step live on screen, and you follow along.
 2. **Run and check.** Run the skill on a narrow topic you know, then check
    that every paper exists and says what is claimed.
 
-The skill is a starting point. Refine it for your own field.
+The skill is a starting point. Refine it for your own field. The
+[Skills page](/skills/) lists the course handoffs and shared skill
+collections.
 
 ## Between sessions
 
