@@ -16,7 +16,7 @@ topics:
   - Human–agent interaction
   - Skills and skill stacks
   - Sandboxing and safety
-interactive: TBD
+interactive: Make your own literature-review skill with your agent. It interviews you, writes the skill, and you check every paper it finds.
 readings:
   core:
     - authors: Anthropic
@@ -98,7 +98,15 @@ After this session you can:
 
 ## Interactive component
 
-TBD.
+About 17 minutes. We do each step live on screen, and you follow along.
+
+1. **Interview and create.** Your agent reads a
+   [handoff file](/handoff/lit-review-skill.md), asks you a few questions
+   about your field and sources, and writes a `lit-review` skill.
+2. **Run and check.** Run the skill on a narrow topic you know, then check
+   that every paper exists and says what is claimed.
+
+The skill is a starting point. Refine it for your own field.
 
 ## Between sessions
 
