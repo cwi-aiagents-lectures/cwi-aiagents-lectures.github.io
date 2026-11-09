@@ -7,8 +7,8 @@ room: Euler room
 track: Practical
 description: >-
   A good task description, instruction files and memory, tools, steering a
-  session, skills and skill stacks, and safe use: how a sandbox works, prompt
-  injection, and what data leaves your machine.
+  session, skills and skill stacks, and safe use: how a sandbox works, five
+  ways to isolate an agent, and prompt injection.
 topics:
   - A good task description
   - Context and memory
@@ -90,11 +90,11 @@ After this session you can:
   your own with your agent, and what research says about which skills help.
   Skill stacks that people share for research and development, how they are
   built, and how to judge one before you install it.
-- **Sandboxing and safety.** How a sandbox works and how it keeps an agent's
-  actions contained, where it leaks, and stronger isolation. Prompt injection,
-  with a harmless live demo, and the "lethal trifecta" of private data,
-  untrusted content, and outside communication. What leaves your machine,
-  confidential peer-review material, personal data, local models, and cost.
+- **Sandboxing and safety.** Approval and the sandbox as two separate
+  controls. How a sandbox works, and what it does not cover. Five ways to
+  isolate an agent, from a sandboxed shell to containers and virtual machines.
+  Prompt injection, and the "lethal trifecta" of private data, untrusted
+  content, and outside communication.
 
 ## Interactive component
 
