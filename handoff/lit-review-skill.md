@@ -40,7 +40,7 @@ Ask these questions one at a time. Offer the suggested default in brackets, so t
 2. **Sources.** Which sources should the skill search? (default: arXiv, Semantic Scholar and Crossref, plus any field-specific source you name, for example PubMed, DBLP or the ACL Anthology)
 3. **How many papers.** How many papers per search? (default: 5)
 4. **Recency.** How recent should they be? (default: the last 3 years, plus older papers only if they are central)
-5. **Output format.** What should the result look like? (default: a Markdown table with title, authors, year, venue or arXiv ID, link, and one sentence on what the paper does. Optionally a `.bib` file.)
+5. **Output format.** What should the result look like? (default: a short summary paragraph of the field, then a Markdown table with title, authors, year, venue or arXiv ID, link, and one sentence on what the paper does, then a list of what could not be verified. Optionally a `.bib` file.)
 6. **Verification rules.** How strict should the checks be? (default: every paper is looked up live, the title and first author must match the record, and anything that does not match is marked "could not verify". Never invent citations.)
 7. **Where to save results.** Where should each search be saved? (default: `lit-review/<topic-slug>.md` in the current project folder)
 8. **Where the skill lives.** Personal, for all your projects (`~/.claude/skills/lit-review/`), or this project only (`.claude/skills/lit-review/`)? (default: this project only. For Codex use `.agents/skills/lit-review/` in the same way.)
@@ -75,10 +75,21 @@ Input: a topic, given after /lit-review. If no topic is given, ask for one.
 3. Keep the most relevant ones, up to the number above.
 4. Verify every kept paper with a live lookup of its own record (arXiv abstract page, DOI record or Semantic Scholar page). Title and first author must match.
 5. Write the result in the format below and save it to <answer 7>.
-6. End with a short list of what you could not verify, and why.
+6. Also present the result to the user in your reply, nicely formatted: a two or three sentence summary of what the papers show together, the table, and a short list of what you could not verify, and why. Do not only point to the saved file.
 
 ## Output format
 <answer 5>
+
+Example layout:
+
+    ## <topic>
+    <Two or three sentences: what these papers show together, and how they differ.>
+
+    | # | Paper | Authors | Year | Where | What it does |
+    |---|---|---|---|---|---|
+    | 1 | <title, linked> | <first author> et al. | <year> | <venue or arXiv ID> | <one sentence> |
+
+    Could not verify: <list, with the reason>, or "none".
 
 ## Rules
 - Never invent a paper, author, year, venue, DOI or arXiv ID.
@@ -99,7 +110,12 @@ Use the agent's web tools or `curl` for these.
 
 ## Step 4. Test it once
 
-Run the skill on a narrow topic the user knows well, with 3 papers. Ask the user for the topic (default in a scripted run: "prompt injection defenses for LLM agents").
+Run the skill on a narrow topic the user knows well, with 3 papers. Ask the user for the topic first. If they have none, suggest one of these two:
+
+- "AI agents for scientific discovery"
+- "LLMs for formal theorem proving in Lean"
+
+In a scripted run with nobody to answer, use "LLMs for formal theorem proving in Lean".
 
 - In Claude Code the user can type `/lit-review <topic>`. You can also follow the skill file directly.
 - Save the result where the skill says.
@@ -107,11 +123,10 @@ Run the skill on a narrow topic the user knows well, with 3 papers. Ask the user
 
 ## Step 5. Show the user
 
-Show:
+Show, in your reply (the user reads your reply, so do not only give file paths):
 
-- the path of the skill, and the full text of its `SKILL.md`, printed in your reply
-- the test result, with one line per paper and how you verified it
-- anything you could not verify.
+- the path of the skill, then the **full text of its `SKILL.md` in a code block**, so the user can read what it will do
+- the test result, laid out as the skill lays it out: the short summary first, then the table, then the "could not verify" list, with how you verified each paper
 
 Then tell the user, in two or three lines:
 
