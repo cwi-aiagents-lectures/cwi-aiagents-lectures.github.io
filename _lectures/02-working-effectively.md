@@ -44,7 +44,9 @@ readings:
       title: "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
       url: https://arxiv.org/abs/2302.12173
       year: 2023
-materials: []
+materials:
+  - title: Slides (PDF)
+    url: /assets/slides/02-working-effectively.pdf
 ---
 
 ## Overview
