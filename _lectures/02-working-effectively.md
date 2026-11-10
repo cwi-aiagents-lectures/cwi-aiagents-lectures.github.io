@@ -90,11 +90,12 @@ After this session you can:
   your own with your agent, and what research says about which skills help.
   Skill stacks that people share for research and development, how they are
   built, and how to judge one before you install it.
-- **Sandboxing and safety.** Approval and the sandbox as two separate
-  controls. How a sandbox works, and what it does not cover. Five ways to
-  isolate an agent, from a sandboxed shell to containers and virtual machines.
-  Prompt injection, and the "lethal trifecta" of private data, untrusted
-  content, and outside communication.
+- **Sandboxing and safety.** Prompt injection first, and the "lethal
+  trifecta" of private data, untrusted content, and outside communication.
+  Then what a sandbox is, and why approval and the sandbox are two separate
+  controls. What the sandbox covers and what it does not, and why permission
+  rules alone are not enough. Five ways to isolate an agent, from a sandboxed
+  shell to containers and virtual machines, and what we recommend.
 
 ## Interactive component
 
